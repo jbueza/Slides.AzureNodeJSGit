@@ -54,11 +54,12 @@
 </head>
 
 <body class="deck-container">
-<a href="http://www.agilebusinesscloud.com" target="_blank"><img class="logo-abc" src="http://abcmarketing.azurewebsites.net/img/logo-abc.png"></a>
-<a href="http://www.resaas.com" target="_blank"><img class="logo-resaas" src="http://www.resaas.com/assets/home/images/ui/logo-resaas.png"></a>
 <!-- Begin slides -->
 <section class="slide" id="title-slide">
 	<h1>Windows Azure<br>Web Sites</h1>
+	<a href="http://www.agilebusinesscloud.com" target="_blank"><img class="logo-abc" src="http://abcmarketing.azurewebsites.net/img/logo-abc.png"></a>
+  <a href="http://www.resaas.com" target="_blank"><img class="logo-resaas" src="http://www.resaas.com/assets/home/images/ui/logo-resaas.png"></a>
+  
 	<div class="meta">
 	  <img src="http://content.agilebusinesscloud.com/content/images/JaimeBueza.jpg" width="75" align="left">
 	  <span class="author">Jaime Bueza</span>
@@ -69,60 +70,80 @@
     </span>
 	</div>
 </section>
-<section class="slide" id="extensions">
+<section class="slide">
 	<h2>In This Talk</h2>
 	<p>I'll be going over a few awesome features that landed recently...</p>
 	<ul>
 		<li class="slide">
-			<strong>Git-based deployment</strong>: Adds support for deploying web apps with Git
+			<strong>Git-based deployment</strong>: Added support for deploying web apps with Git
 		</li>
-		
-		<li class="slide" id="extensions-hash">
+		<li class="slide">
 			<strong>Apps</strong>: Added "ready to go" applications, such as, Wordpress, Drupal, DotNetNuke. Also support for MySQL databases.
 		</li>
-
-		<li class="slide" id="extensions-navigation">
+		<li class="slide">
 			<strong>SDKs</strong>: Added support for NodeJS, PHP, Python, and Java
 		</li>
 	</ul>
-	
-	<p class="slide" id="extension-folders">Each extension folder in the download package contains the necessary JavaScript, CSS, and HTML&nbsp;files. For a complete list of extension modules included in deck.js, check out the&nbsp;<a href="http://imakewebthings.github.com/deck.js/docs">documentation</a>.</p>
 </section>
 
-<section class="slide" id="nested">
-	<h2>Nested Slides</h2>
-	<p>That last slide had a few steps.  To create substeps in slides, just nest them:</p>
-	<pre><code>&lt;section class=&quot;slide&quot;&gt;
-  &lt;h2&gt;Extensions&lt;/h2&gt;
-  &lt;p&gt;Core gives you basic slide functionality...&lt;/p&gt;		
-  &lt;ul&gt;
-     &lt;li class=&quot;slide&quot;&gt;
-        &lt;h3&gt;deck.goto&lt;/h3&gt;
-        &lt;p&gt;Adds a shortcut key to jump to any slide number...&lt;/p&gt;
-     &lt;/li&gt;
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;	
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;</code></pre>
+<section class="slide">
+  <h2>Git-based deployment</h2>
+  <pre><code>
+    λ: git init
+    λ: git remote add azure ______
+    λ: git add .
+    λ: git commit -m "Go Azure Go" .
+    λ: git push azure master
+  </code></pre>
+  <h3>Demo Time!</h3>
 </section>
 
-<section class="slide" id="elements-images">
-	<h2>Other Elements: Images</h2>
-	<img src="http://placekitten.com/600/375" alt="Kitties">
-	<pre><code>&lt;img src=&quot;http://placekitten.com/600/375&quot; alt=&quot;Kitties&quot;&gt;</code></pre>
+<section class="slide">
+  <h2>Apps</h2>
+  <ul>
+    <li class="slide">Windows Azure allows you to easily deploy "ready to go" apps. A great example is Wordpress.</li>
+    <li class="slide">In this demo, I'll create a Wordpress blog and post a few items.</li>
+    <li class="slide">Keep in mind, there is plenty of ptential -- more apps in future!</li>
+  </ul>
+  <h3>Demo Time!</h3>
 </section>
 
-<section class="slide" id="elements-blockquotes">
-	<h2>Other Elements: Blockquotes</h2>
-	<blockquote cite="http://example.org">
-		<p>Food is an important part of a balanced diet.</p>
-		<p><cite>Fran Lebowitz</cite></p>
-	</blockquote>
-	<pre><code>&lt;blockquote cite=&quot;http://example.org&quot;&gt;
-  &lt;p&gt;Food is an important part of a balanced diet.&lt;/p&gt;
-  &lt;p&gt;&lt;cite&gt;Fran Lebowitz&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</code></pre>
+<section class="slide">
+  <h2>SDKs</h2>
+
+  <p>In this demo, I'll be using the NodeJS SDK for spinning up a web app and pushing it to Azure.</p>
+  
+  <ul>
+    <li class="slide">1. Creating a brand new dynamic site using Express/NodeJS</li>
+    <li class="slide">2. Deploying to Azure</li>
+    <li class="slide">3. Winning</li>
+  </ul>
+</section>
+
+<section class="slide">
+	<h2>A few gotchas about Azure Sites</h2>
+  <ul>
+    <li class="slide"><strong>Custom Domains</strong>: coming soon to Shared. Works in Reserved though!</li>
+    <li class="slide"><strong>SSL</strong>: works great on azuresites.net, not so great on custom domains in reserved mode.</li>
+    <li class="slide"><strong>HTTP Requests through IIS</strong>: no web sockets out of the box, must use worker role</li>
+  </ul>
+</section>
+
+<section class="slide">
+	<h2>The Good Parts</h2>
+  <ul>
+    <li class="slide"><strong>Convenience</strong>: if you wanted a site up and running very quickly, this is how you do it!</li>
+    <li class="slide"><strong>Cheap</strong>: shared websites (you get 10) are free! Reserved instances cost money.</li>
+    <li class="slide"><strong>Scale</strong>: drag the bar or set instance counts on your Azure Web Site to vertically or horizontally!</li>
+    <li class="slide"><strong>Potential</strong>: Azure is evolving rapidly, more services, tools, and APIs coming out every few weeks</li>
+    <li class="slide"><strong>Open</strong>: deploy any stack you want (NodeJS, PHP, JavaScript, Python)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Done!</h2>
+  <p>Any questions? concerns? cats? Hit me up <a href="http://twitter.com/jbueza">@jbueza</a></p>
+  <p>OH YEAH, RESAAS is always looking for backend and frontend developers! Come say 'hi', we're a small team of engineers!</p>
 </section>
 
 

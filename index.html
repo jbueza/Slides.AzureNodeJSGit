@@ -90,22 +90,23 @@
   <h2>Git-based deployment</h2>
   <pre><code>
     λ: git init
-    λ: git remote add azure ______
     λ: git add .
     λ: git commit -m "Go Azure Go" .
+    λ: git remote add azure ______    
     λ: git push azure master
   </code></pre>
   <h3>Demo Time!</h3>
+  <p>Let's put up a static HTML file with hello world!</p>
 </section>
 
 <section class="slide">
-  <h2>Apps</h2>
+  <h2>Applications (apps)</h2>
   <ul>
     <li class="slide">Windows Azure allows you to easily deploy "ready to go" apps. A great example is Wordpress.</li>
     <li class="slide">In this demo, I'll create a Wordpress blog and post a few items.</li>
     <li class="slide">Keep in mind, there is plenty of ptential -- more apps in future!</li>
+    <li class="slide">Demo Time! Let's create a Wordpress blog!</li>
   </ul>
-  <h3>Demo Time!</h3>
 </section>
 
 <section class="slide">
@@ -121,7 +122,7 @@
 </section>
 
 <section class="slide">
-	<h2>A few gotchas about Azure Sites</h2>
+	<h2>A few things...</h2>
   <ul>
     <li class="slide"><strong>Custom Domains</strong>: coming soon to Shared. Works in Reserved though!</li>
     <li class="slide"><strong>SSL</strong>: works great on azuresites.net, not so great on custom domains in reserved mode.</li>
@@ -134,11 +135,13 @@
   <ul>
     <li class="slide"><strong>Convenience</strong>: if you wanted a site up and running very quickly, this is how you do it!</li>
     <li class="slide"><strong>Cheap</strong>: shared websites (you get 10) are free! Reserved instances cost money.</li>
-    <li class="slide"><strong>Scale</strong>: drag the bar or set instance counts on your Azure Web Site to vertically or horizontally!</li>
+    <li class="slide"><strong>Scale</strong>: set instance counts on your Azure Web Site to vertically or horizontally!</li>
     <li class="slide"><strong>Potential</strong>: Azure is evolving rapidly, more services, tools, and APIs coming out every few weeks</li>
+    <li class="slide"><strong>Tooling</strong>: easily slot in Jenkins to run your unit tests, service layer tests, and then push your site</li>
     <li class="slide"><strong>Open</strong>: deploy any stack you want (NodeJS, PHP, JavaScript, Python)</li>
   </ul>
 </section>
+
 
 <section class="slide">
   <h2>Done!</h2>
